@@ -21,40 +21,17 @@ def move_piece(moves, screen):
         wf = where_from[0]
         wfg = int(where_from[-1])-1
         
-        # finds the piece at that spot and stores it
         piece = grid[wf][wfg][0]
         
         wt = where_to[0]
         wtg = int(where_to[-1])-1
 
         if is_valid_piece(piece, wt, wtg): 
-            # clears that spot
-
-            if piece.split("_")[0] == turn:
-                
-                # pawn move attempt
-                # if piece.split("_")[-1] == "pawn":
-                #     if turn == "white":
-                        
-                
-                # castling attempt
-                # if piece.split("_")[-1] == "king" and :
-                #     if grid[wt][wtg][0] in ["c1", "f1", "c8", "f8"]:
-                        
-                #         grid[wf][wfg][0] = where_from
-                #         grid[wt][wtg][0] = piece
-                        
-                #         if grid[wt][wtg][0] == "b1":
-                            
-                        
-                # else:        
+            if piece.split("_")[0] == turn:  
                     
                 grid[wf][wfg][0] = where_from
-
-                # moves the piece to the spot clicked
                 grid[wt][wtg][0] = piece
             
-                # reloads the screen
                 load_screen(screen)
             
                 if turn == "white":
