@@ -1,4 +1,3 @@
-import pygame
 from utilities.game import game
 
 
@@ -8,7 +7,7 @@ class Chess:
         self.square_size = min(self.screen_size[0], self.screen_size[1]) // 8
 
         self.color_schemes = {
-            "white_and_black": [(255, 255, 255), (0, 0, 0)],
+            "white_and_gray": [(255, 255, 255), (192,192,192)],
             "chess.com": [(238, 238, 210), (118, 150, 86)],
         }
         self.current_scheme = self.color_schemes.get("chess.com")
