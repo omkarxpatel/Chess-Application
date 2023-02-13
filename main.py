@@ -15,7 +15,6 @@ class Chess:
         self.moves = []
         self.pieces = ["pawn", "knight", "bishop", "rook", "queen", "king"]
 
-        self.playing = True
         self.is_a_move = False
         self.border_showing = True
 
